@@ -6,14 +6,14 @@
 
 def data_user():
     nome = input('Digite seu nome completo: ')
-    idadeCorreta = False
-    anoAtual = 2022
-    while(idadeCorreta == False): 
+    idade_correta = False
+    ano_atual = 2022
+    while(idade_correta == False): 
          try:
             idade = int(input('Digite seu ano de nascimento: '))
             if(idade >= 1922 and idade <= 2021):
-                idadeCorreta = True
-                print('Nome:' + nome, ', Idade:' + str(anoAtual - idade))
+                idade_correta = True
+                print('Nome:' + nome, ', Idade:' + str(ano_atual - idade))
             else:
                 print('Você digitou um ano inválido. Por favor digite um ano entre 1922 e 2021.')
          except:
