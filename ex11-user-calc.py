@@ -15,7 +15,7 @@
 def calculadora():
     operacao = ''
     while(operacao != 0):
-        operacao = int(input('Qual operação será realizada? \n 1:Soma; 2:Subração; 3: Muliplicação; 4:Divisão; 0: Sair'))
+        operacao = int(input('Qual operação será realizada? \n 1:Soma; 2:Subtração; 3:Muliplicação; 4:Divisão; 0:Sair '))
   
         if(operacao == 1):  
             n1 = int(input('Digite o primeiro numero: '))
