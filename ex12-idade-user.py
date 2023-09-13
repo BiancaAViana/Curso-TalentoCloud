@@ -4,16 +4,16 @@
 
 # Caso o usuário não digite um número ou apareça um inválido no campo do ano, o sistema informará o erro e continuará perguntando até que um valor correto seja preenchido.
 
-
 def data_user():
     nome = input('Digite seu nome completo: ')
     idadeCorreta = False
+    ano_atual = 2022
     while(idadeCorreta == False): 
          try:
             idade = int(input('Digite seu ano de nascimento: '))
             if(idade >= 1922 and idade <= 2021):
                 idadeCorreta = True
-                print('Nome:' + nome, ', Idade:' + str(idade))
+                print('Nome:' + nome, ', Idade:' + str(ano_atual - idade))
             else:
                 print('Você digitou um ano inválido. Por favor digite um ano entre 1922 e 2021.')
          except:
