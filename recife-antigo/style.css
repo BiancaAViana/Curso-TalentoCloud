@@ -1,0 +1,73 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+    color: rgb(199, 148, 7);
+    background-color: aliceblue;
+    padding: 5px 0;
+}
+
+body {
+    background-color: rgb(221, 221, 221);
+    color: rgb(75, 69, 69);
+}
+
+.menu {
+    margin: 30px;
+    list-style: none;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a {
+    color: rgb(75, 69, 69);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: rgb(199, 148, 7);
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main h1 {
+    margin: 60px auto 30px;
+}
+
+.img-card img {
+    width: 550px;
+    margin: 10px 0;
+    border-radius: 5px; 
+}
+
+main p {
+    margin: 15px 0;
+}
+
+.container, section {
+    margin: 60px 0;
+}
+
+#link {
+    color: rgb(199, 148, 7);
+}
+
+#link:hover {
+    color: rgb(75, 69, 69);
+}
+
+footer {
+    text-align: center;
+    margin: 30px 0;
+}
