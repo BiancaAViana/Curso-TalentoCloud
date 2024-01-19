@@ -34,7 +34,7 @@ function cadastrarProduto(event) {
            produtosCadastrados.innerHTML = `
              <p><span>Produto:</span> ${data.json.produto}</p>
              <p><span>Valor:</span> R$${data.json.valor}</p> 
-             <p><span>Descrição:</span> ${data.json.descricao}</p>
+             <p><span>Descrição:</span>${data.json.descricao}</p>
              `
 
             nomeProduto.value = '';
