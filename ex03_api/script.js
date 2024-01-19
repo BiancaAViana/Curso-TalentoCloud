@@ -12,39 +12,36 @@ function cadastrarProduto(event) {
     event.preventDefault();
     feedbackUsuario.innerText = '';
 
+    const bodyJson = JSON.stringify({
+        produto: nomeProduto.value,
+        valor: valorProduto.value,
+        descricao: descricaoProduto.value
+    })
+
     fetch('https://httpbin.org/post', {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'
         },
-        body: JSON.stringify({
-            produto: nomeProduto.value,
-            valor: valorProduto.value,
-            descricao: descricaoProduto.value
-        })
+        body: bodyJson
     })
-        .then((resp) => console.log(resp))
-        .then((data) => {
-            console.log(data)
-        helpMsg.innerText = '';
+        .then(resp => resp.json())
+        .then(data => {
+            console.log('data :',data)
+            helpMsg.innerText = '';
 
-        //A REQUISIÇÃO ESTA RESPONDENDO(Status:200) MAS OS DADOS ESTÃO VINDO UNDEFINED COMO SE A ROTA NÃO ACEITASSE OS VALORES
-        //    produtosCadastrados.innerHTML = `
-        //     <p><span>Produto:</span> ${data.produto}</p>
-        //     <p><span>Valor:</span> R$${data.valor}</p> 
-        //     <p><span>Descrição:</span> ${data.descricao}</p>
-        //     `
-
-            produtosCadastrados.innerHTML = `
-            <p><span>Produto:</span> ${nomeProduto.value}</p>
-            <p><span>Valor:</span> R$${valorProduto.value}</p> 
-            <p><span>Descrição:</span> ${descricaoProduto.value}</p>
-            `
-            alert('Produto cadastrado com sucesso!');
+            //A REQUISIÇÃO ESTA RESPONDENDO(Status:200) MAS O DATA. ESTÁ RETORNANDO COMO UNDEFINED. SÓ CONSIGO ACESSA-LA COM .JSON.
+           produtosCadastrados.innerHTML = `
+             <p><span>Produto:</span> ${data.json.produto}</p>
+             <p><span>Valor:</span> R$${data.json.valor}</p> 
+             <p><span>Descrição:</span> ${data.json.descricao}</p>
+             `
 
             nomeProduto.value = '';
             valorProduto.value = '';
             descricaoProduto.value = '';
+
+             alert('Produto cadastrado com sucesso!');
         })
         .catch((err) => {
             console.log(err);
