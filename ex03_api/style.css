@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    background-color: wheat;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px 0;
+    color: brown;
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: none;
+    background-color: brown;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+form .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 15px;
+    color: white;
+}
+
+form .card input {
+    height: 40px;
+    width: 250px;
+}
+
+form .card textarea,
+form .card input {
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+}
+
+form button {
+    align-self: center;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: brown;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(206, 145, 145);
+}
+
+#produtos-cadastrados {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid black;
+    background-color: brown;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+}
+
+#produtos-cadastrados span {
+    font-weight: bold;
+}
+
+#feedback-usuario {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    color: brown;
+}
